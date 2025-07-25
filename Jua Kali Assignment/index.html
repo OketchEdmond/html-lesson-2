@@ -9,32 +9,38 @@
 <body>
   <header>
     <div class="logo">🛠️ Corner Jua Kali Works</div>
-    <nav>
+    <nav class="navbar">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
+      <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
     </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="toggleMenu()">Home</a>
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
   </header>
   <section id="home" class="hero">
     <h1>Welcome to Corner Jua Kali Works</h1>
     <p>Quality metalwork, carpentry, and repairs at the heart of your neighborhood.</p>
-    <img src="images/workshop.jpeg" alt="Jua Kali Workshop" class="hero-img" />
   </section>
   <section id="services">
     <h2>Our Services</h2>
     <div class="service-list">
-      <div class="service">
+      <div class="service-card">
         <img src="images/metal work.jpeg" alt="Metalwork" />
         <h3>Metalwork</h3>
         <p>Custom gates, grills, doors, and repairs.</p>
       </div>
-      <div class="service">
+      <div class="service-card">
         <img src="images/carpentry.jpeg" alt="Carpentry" />
         <h3>Carpentry</h3>
         <p>Furniture, shelves, and wooden repairs.</p>
       </div>
-      <div class="service">
+      <div class="service-card">
         <img src="images/repairs.jpeg" alt="Repairs" />
         <h3>Repairs</h3>
         <p>General repairs for homes and businesses.</p>
@@ -44,18 +50,36 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-list">
-      <img src="images/work 1.jpeg" alt="Finished gate" />
-      <img src="images/carpentry project.jpeg" alt="Carpentry project" />
-      <img src="images/repair work.jpeg" alt="Repair work" />
+      <img src="images/work 1.jpeg" alt="Finished gate" onclick="openLightbox(this)" />
+      <img src="images/carpentry project.jpeg" alt="Carpentry project" onclick="openLightbox(this)" />
+      <img src="images/repair work.jpeg" alt="Repair work" onclick="openLightbox(this)" />
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" src="" alt="Gallery Image" />
     </div>
   </section>
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Phone: 0712 345678<br>WhatsApp: 0712 345678<br>Location: Corner, Nairobi</p>
-    <img src="images/map.png" alt="Location Map" class="map-img" />
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Phone: 0712 345678<br>WhatsApp: 0712 345678<br>Location: Corner, Nairobi</p>
+      <img src="images/map.png" alt="Location Map" class="map-img" />
+    </div>
   </section>
   <footer>
-    &copy; 2025 Corner Jua Kali Works. All rights reserved.
+    <div class="footer-content">
+      <span>&copy; 2025 Corner Jua Kali Works. All rights reserved.</span>
+      <div class="social-icons">
+        <a href="#" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+        <a href="#" title="WhatsApp"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" /></a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
