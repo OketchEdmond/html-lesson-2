@@ -10,23 +10,25 @@ h2 {
 }
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f7f7f7;
+  background: #f5f5f7;
   color: #222;
   line-height: 1.6;
 }
 
 header {
-  background: #222;
+  background: #181818;
   color: #fff;
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.08);
 }
 .logo {
   font-size: 2rem;
   font-weight: bold;
   margin-left: 2rem;
+  color: #ff9800;
 }
 .navbar {
   display: flex;
@@ -40,9 +42,12 @@ header {
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.2s;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
 }
 .navbar a:hover {
-  color: #ff9800;
+  color: #181818;
+  background: #ff9800;
 }
 .hamburger {
   display: none;
@@ -52,7 +57,7 @@ header {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background: #222;
+  background: #181818;
   position: absolute;
   top: 60px;
   right: 0;
@@ -67,7 +72,7 @@ header {
 }
 .mobile-menu a:hover {
   background: #ff9800;
-  color: #222;
+  color: #181818;
 }
 
 @media (max-width: 800px) {
@@ -85,8 +90,8 @@ header {
 
 /* Hero section with background image */
 .hero {
-  background: url('images/workshop.jpeg') center/cover no-repeat;
-  color: #fff;
+  background: url('images/workshop.jpeg') center/cover no-repeat, linear-gradient(180deg, #181818 0%, #ff9800 100%);
+  color: #ff9800;
   text-align: center;
   padding: 5rem 1rem 4rem 1rem;
   min-height: 400px;
@@ -94,13 +99,14 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 32px rgba(255,152,0,0.18);
   position: relative;
 }
 
 #services {
   background: #fff;
   padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .service-list {
   display: flex;
@@ -109,17 +115,20 @@ header {
   flex-wrap: wrap;
 }
 .service-card {
-  background: #f7f7f7;
+  background: #fff;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 2.2rem;
   text-align: center;
   width: 320px;
   transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #ff9800;
 }
 .service-card:hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 6px 24px rgba(255,152,0,0.15);
+  background: #181818;
+  color: #fff;
 }
 .service-card img {
   width: 140px;
@@ -127,11 +136,14 @@ header {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1.2rem;
+  border: 3px solid #ff9800;
+  background: #fff;
 }
 
 #gallery {
-  background: #f7f7f7;
+  background: #f5f5f7;
   padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.04);
 }
 .gallery-list {
   display: flex;
@@ -147,10 +159,13 @@ header {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s, box-shadow 0.2s;
+  border: 3px solid #181818;
+  background: #fff;
 }
 .gallery-list img:hover {
   transform: scale(1.07);
   box-shadow: 0 6px 24px rgba(255,152,0,0.15);
+  border-color: #ff9800;
 }
 .lightbox {
   display: none;
@@ -159,7 +174,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.8);
+  background: rgba(24,24,24,0.95);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -169,12 +184,13 @@ header {
   max-height: 80vh;
   border-radius: 1rem;
   box-shadow: 0 4px 32px rgba(255,152,0,0.25);
+  background: #fff;
 }
 .lightbox .close {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  color: #fff;
+  color: #ff9800;
   font-size: 2.5rem;
   cursor: pointer;
   z-index: 1001;
@@ -186,6 +202,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.04);
 }
 .contact-form {
   display: flex;
@@ -213,7 +230,7 @@ header {
   transition: background 0.2s;
 }
 .contact-form button:hover {
-  background: #222;
+  background: #181818;
 }
 .contact-info {
   text-align: center;
@@ -222,14 +239,17 @@ header {
   width: 320px;
   border-radius: 0.7rem;
   margin-top: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(24,24,24,0.08);
+  border: 2px solid #ff9800;
+  background: #fff;
 }
 
 footer {
-  background: #222;
+  background: #181818;
   color: #fff;
   padding: 1.5rem 0;
   text-align: center;
+  box-shadow: 0 -2px 8px rgba(255,152,0,0.08);
 }
 .footer-content {
   display: flex;
@@ -241,6 +261,7 @@ footer {
 }
 .footer-content span {
   font-size: 1rem;
+  color: #ff9800;
 }
 .social-icons {
   display: flex;
